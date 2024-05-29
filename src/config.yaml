@@ -1,5 +1,5 @@
 site:
-  name: AstroWind
+  name: Anna Gurkovich
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
@@ -9,23 +9,19 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: 'Anna Gurkovich - English Teacher'
+    template: '%s — Anna Gurkovich - English Teacher'
+  description: "📚 Experienced English teacher with a passion for literature and helping students improve their language skills."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: 'Anna Gurkovich - English Teacher'
     images:
       - url: '~/assets/images/default.png'
         width: 1200
         height: 628
     type: website
-  twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
-    cardType: summary_large_image
 
 i18n:
   language: en
@@ -39,12 +35,6 @@ apps:
     post:
       isEnabled: true
       permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
-      robots:
-        index: true
-
-    list:
-      isEnabled: true
-      pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
       robots:
         index: true
 

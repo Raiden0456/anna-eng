@@ -12,6 +12,10 @@ module.exports = {
         default: 'var(--aw-color-text-default)',
         muted: 'var(--aw-color-text-muted)',
       },
+      backgroundImage: {
+        'blob-white': 'url("/src/assets/images/blob-white.svg")',
+        'blob-dark': 'url("/src/assets/images/blob-dark.svg")',
+      },
       fontFamily: {
         sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
         serif: ['var(--aw-font-serif, ui-serif)', ...defaultTheme.fontFamily.serif],
