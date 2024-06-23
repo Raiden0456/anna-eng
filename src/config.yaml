@@ -1,5 +1,5 @@
 site:
-  name: Anna Gurkovich
+  name: Анна Гуркович
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: 'Anna Gurkovich - English Teacher'
-    template: '%s — Anna Gurkovich - English Teacher'
-  description: "📚 Experienced English teacher with a passion for literature and helping students improve their language skills."
+    default: 'Анна Гуркович - Репетитор английского языка'
+    template: '%s — Анна Гуркович - Репетитор английского языка'
+  description: "📚 Опытный учитель английского языка с страстью к литературе и помощью студентам в улучшении их языковых навыков."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: 'Anna Gurkovich - English Teacher'
+    site_name: 'Анна Гуркович - Репетитор английского языка'
     images:
       - url: '~/assets/images/default.png'
         width: 1200
