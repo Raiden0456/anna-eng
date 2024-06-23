@@ -21,6 +21,7 @@ import diploma from '../assets/images/diploma.jpg';
 import ranhigs from '../assets/images/ranhigs.png';
 import olimpiad_1 from '../assets/images/olimpiad_1.png';
 import olimpiad_2 from '../assets/images/olimpiad_2.png';
+import ielts from '../assets/images/Ielts_Gurkovich.jpg';
 import { getPermalink } from '../utils/permalinks';
 
 const metadata = {
@@ -32,6 +33,7 @@ const certificates = {
   converse,
   eef,
   hse,
+  ielts,
   diploma,
   ranhigs,
   olimpiad_1,
@@ -247,6 +249,96 @@ const certificates = {
     isAfterContent={true}
     items={[
       {
+        title: '2022 г.',
+        description: `Сертификат IELTS с баллом 8.0`,
+      },
+
+    ]}
+    image={{
+      src: certificates.ielts,
+      alt: 'IELTS',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Перейти на страницу IELTS',
+      icon: 'tabler:chevron-right',
+      href: 'https://ielts.org/',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        IELTS: <br /><span class="text-2xl">International English Language Testing System</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+  
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: '2018 г.',
+        description: `Победитель Олимпиады школьников по Английскому языку.`,
+      },
+
+    ]}
+    image={{
+      src: certificates.olimpiad_1,
+      alt: 'Olympiad Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Диплом первой степени: <br /><span class="text-2xl">Межрегиональная олимпиада школьников "Евразийская лингвистическая олимпиада"</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
+        title: '2018 г.',
+        description: `Призер Олимпиады школьников по Английскому языку.`,
+      },
+
+    ]}
+    image={{
+      src: certificates.olimpiad_2,
+      alt: 'Olympiad Image 2',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Диплом второй степени: <br /><span class="text-2xl">Межрегиональная олимпиада школьников "Высшая проба"</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent={true}
+    items={[
+      {
         title: '2023 г.',
         description:
           'Набрано 76/100 баллов.',
@@ -362,62 +454,6 @@ const certificates = {
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: '2018 г.',
-        description: `Победитель Олимпиады школьников по Английскому языку.`,
-      },
-      
-    ]}
-    image={{
-      src: certificates.olimpiad_1,
-      alt: 'Olympiad Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Диплом первой степени: <br /><span class="text-2xl">Межрегиональная олимпиада школьников "Евразийская лингвистическая олимпиада"</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: '2018 г.',
-        description: `Призер Олимпиады школьников по Английскому языку.`,
-      },
-
-    ]}
-    image={{
-      src: certificates.olimpiad_2,
-      alt: 'Olympiad Image 2',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Диплом второй степени: <br /><span class="text-2xl">Межрегиональная олимпиада школьников "Высшая проба"</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
   <!-- Testimonials Widget *********** -->
 
   <Testimonials
@@ -453,7 +489,7 @@ const certificates = {
         },
       },
       {
-        testimonial: `Анна - очень хороший и компетентный преподаватель. С ней комфортно работать и общаться. Каждый урок, когда мы говорим по-английски, это отличная практика. Анна также подготовила высококачественные и понятные презентации с полезными материалами. Она объясняет материал очень терпеливо и доходчиво, так что всё становится ясно. В результате занятия - это идеальное сочетание бизнеса и удовольствия!`,
+        testimonial: `Anna is a very good and competent teacher. She is comfortable to work with and communicate with. Every lesson we speak English is a great practice. Anna also collected high-quality and understandable presentations with useful materials. She explains the material very patiently and intelligibly, so that everything becomes clear. As a result, classes are the perfect combination of business and pleasure!`,
         name: 'Ольга',
         job: 'Студент ВШЭ',
         image: {
@@ -468,7 +504,7 @@ const certificates = {
 
   <CallToAction
     title="Запись на консультацию"
-    subtitle="Я приглашаю каждого ученика на бесплатную 30-минутную консультацию, чтобы понять, какие у вас цели и как я могу помочь вам в их достижении."
+    subtitle="Записывайся на бесплатное пробное занятие - консультацию, где мы познакомимся и обсудим план наших занятий."
     actions={[
       {
         variant: 'primary',
