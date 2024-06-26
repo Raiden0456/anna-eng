@@ -9,6 +9,7 @@ import Features3 from '../components/widgets/Features3.astro';
 import Testimonials from '../components/widgets/Testimonials.astro';
 import Steps from '../components/widgets/Steps.astro';
 import anna from '../assets/images/anna.jpg';
+import katya from '../assets/images/katya.jpg';
 import cats_college from '../assets/images/cats-college.jpg';
 import converse from '../assets/images/converse.jpg';
 import lisa from '../assets/images/Lisa.png';
@@ -17,12 +18,16 @@ import vrezho from '../assets/images/Vrezho.png';
 import olga from '../assets/images/olga.jpg';
 import eef from '../assets/images/eef.jpg';
 import hse from '../assets/images/hse.jpg';
+import HSE2 from '../assets/images/HSE2.jpg';
 import diploma from '../assets/images/diploma.jpg';
 import ranhigs from '../assets/images/ranhigs.png';
 import olimpiad_1 from '../assets/images/olimpiad_1.png';
 import olimpiad_2 from '../assets/images/olimpiad_2.png';
 import ielts from '../assets/images/Ielts_Gurkovich.jpg';
 import { getPermalink } from '../utils/permalinks';
+import Features from "../components/widgets/Features.astro";
+import Features2 from "../components/widgets/Features2.astro";
+import Note from "../components/widgets/Note.astro";
 
 const metadata = {
   title: 'Анна Гуркович',
@@ -33,6 +38,7 @@ const certificates = {
   converse,
   eef,
   hse,
+  HSE2,
   ielts,
   diploma,
   ranhigs,
@@ -46,9 +52,10 @@ const certificates = {
   <Fragment slot="header">
     <Header
       links={[
-        { text: 'Главная', href: '#' },
         { text: 'Обо Мне', href: '#about' },
         { text: 'Образование', href: '#education' },
+        { text: 'Преимущества', href: '#features' },
+        { text: 'Виды занятий', href: '#features2' },
         { text: 'Сертификаты', href: '#certificates' },
         { text: 'Отзывы', href: '#testimonials' },
       ]}
@@ -171,6 +178,7 @@ const certificates = {
   <!-- Features3 Widget ************** -->
 
   <Features3
+    id="features"
     title="Преимущевства моих занятий"
     subtitle="Почему тебе будет комфортно."
     columns={3}
@@ -215,6 +223,40 @@ const certificates = {
     ]}
   />
 
+  <Features2
+    id="features2"
+    title="Виды занятий"
+    subtitle="Выбери подходящий формат для себя."
+    columns={3}
+    defaultIcon="tabler:point-filled"
+    items={[
+      {
+        title: 'General English (60 минут)',
+        description: 'Занятия включают в себя отработку следующих навыков:<br>• аудирование и чтение<br>• расширение словарного запаса<br>• грамматика и письмо<br>• говорение, где мы отрабатываем пройденные темы</li></ul>',
+      },
+      {
+        title: 'Business English/English for IT (60 минут, B1+)',
+        description: 'Английский для работы, переговоров, собеседований. Занятия с упором на лексику в сфере маркетинга, менеджмента, программирования. Также возможна подготовка к собеседованиям/переговорам.',
+      },
+      {
+        title: 'IELTS preparation (60-90 минут)',
+        description: 'Занятия по подготовке к международному экзамену IELTS. Расскажу про все tips and tricks как сдать на высший балл!',
+      },
+      {
+        title: '«Бережная» подготовка к ОГЭ (60 минут)',
+        description: 'Помогу не только сдать на 5 и развить все лингвистические навыки, но и подготовлю морально. В этот непростой период важно найти поддержку на занятиях🫂',
+      },
+      {
+        title: 'Speaking club (индивидуально и в группах)',
+        description: 'Занятия, на которых мы обсуждаем самые актуальные темы, основываясь на статьи, видео, новости из англоязычных источников. Никакой скучной теории и учебников. Много глубоких разговоров, размышлений и смеха. Но не забудем про грамматику и вокабуляр!',
+      },
+      {
+        title: 'Прочие консультации',
+        description: 'А также помогу составить мотивационные письма, написать эссе в ВУЗы мечты, подготовиться к всероссийским олимпиадам и публичным выступлениям!',
+      }]}
+  />
+  <Note/>
+
   <!-- Content Widget **************** -->
   <Content
     id="certificates"
@@ -223,9 +265,9 @@ const certificates = {
     isReversed
     items={[
       {
-        title: '2019 - 2023гг.',
+        title: 'Диплом высшего образования с отличием.',
         description:
-          'Диплом высшего образования с отличием.',
+          '2019 - 2023гг.',
       },
     ]}
     image={{
@@ -251,14 +293,40 @@ const certificates = {
   </Content>
 
   <!-- Content Widget **************** -->
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Удостоверение о повышении квалификации. ',
+        description:
+          '2024г.',
+      },
+    ]}
+    image={{
+      src: certificates.HSE2,
+      alt: 'Higher School of Economics',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Удостоверение: <br /><span class="text-2xl">Высшая Школа Экономики</span>
+      </h3>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
 
   <Content
     isReversed
     isAfterContent={true}
     items={[
       {
-        title: '2022 г.',
-        description: `Сертификат IELTS с баллом 8.0`,
+        title: 'Сертификат IELTS',
+        description: `2022 г.`,
       },
 
     ]}
@@ -291,8 +359,8 @@ const certificates = {
     isAfterContent={true}
     items={[
       {
-        title: '2018 г.',
-        description: `Победитель Олимпиады школьников по английскому языку.`,
+        title: 'Победитель Олимпиады школьников по английскому языку.',
+        description: `2018 г.`,
       },
 
     ]}
@@ -319,8 +387,8 @@ const certificates = {
     isAfterContent={true}
     items={[
       {
-        title: '2018 г.',
-        description: `Призер Олимпиады школьников по английскому языку.`,
+        title: 'Призер Олимпиады школьников по английскому языку.',
+        description: `2018 г.`,
       },
 
     ]}
@@ -347,7 +415,8 @@ const certificates = {
     isAfterContent={true}
     items={[
       {
-        title: '2023 г.',
+        title: 'Диплом III степени.',
+        description: '2023 г.'
       },
     ]}
     image={{
@@ -357,7 +426,7 @@ const certificates = {
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Олимпиада: <br /><span class="text-2xl">Высшая лига, олимпиада студентов и выпускников ВШЭ</span>
+        Высшая лига, олимпиада студентов и выпускников ВШЭ
       </h3>
     </Fragment>
 
@@ -373,9 +442,9 @@ const certificates = {
     isAfterContent={true}
     items={[
       {
-        title: '2019 г.',
+        title: 'Благодарственное письмо за организацию Восточного экономического форума (координатор международного отдела и переводчик)',
         description:
-          'Благодарственное письмо за организацию Восточного экономического форума (координатор международного отдела и переводчик) 2019 г.',
+          '2019 г.',
       },
     ]}
     image={{
@@ -407,8 +476,8 @@ const certificates = {
     isAfterContent={true}
     items={[
       {
-        title: '2018 г.',
-        description: `Призер отборочного этапа олимпиады школьников РАНХиГС по предмету английский язык.`,
+        title: 'Призер отборочного этапа олимпиады школьников РАНХиГС по предмету английский язык.',
+        description: `2018 г.`,
       },
     ]}
     image={{
@@ -434,8 +503,8 @@ const certificates = {
     isAfterContent={true}
     items={[
       {
-        title: '2016 - 2017 гг.',
-        description: `Сертификат участника курса английского языка для джуниор учеников в Йельском университете.`,
+        title: 'Сертификат участника курса английского языка для джуниор учеников в Йельском университете.',
+        description: `2016 - 2017 гг.`,
       },
     ]}
     image={{
@@ -501,6 +570,19 @@ const certificates = {
         image: {
           src: olga,
           alt: 'Olga Image',
+        },
+      },
+      {
+        testimonial: `I really enjoyed studying with you. I see the progress after our classes. 
+Your techniques and experience in tutting are great and thanks to them lessons were very interesting.I loved that every single lesson we were doing different things(from grammar to talking about films and every day life). I never felt bored or smth like that during our classes.
+By the way, our preparation for ОГЭ helped me so much, so exam went excellent and my mark is 5. And this preparation wasn’t only about the exam, you prepared me morally and i wasn’t stressed out during the exam.
+To be honest, i’m so glad that i found you as a tutor because our lessons were wonderful and felt like talking with a friend + progressive studying at the same time.
+Thank you`,
+        name: 'Екатерина',
+        job: 'Ученица 9 класса',
+        image: {
+          src: katya,
+          alt: 'Katya Image',
         },
       },
     ]}
